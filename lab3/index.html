@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Лабораторная работа 1</title>
+    <style>
+        body {
+            font-family: 'Times New Roman', Times, serif;
+            line-height: 2;
+            margin: 0;
+            padding: 0;
+            background-color: #2b2b2b64;
+            color: #222222;
+        }
+        header {
+            background: #1f1e1e;
+            color: #fff;
+            padding: 25px 0;
+            text-align: center;
+        }
+        nav {
+            background: #333333;
+            color: #fff;
+            padding: 15px;
+            text-align: center;
+        }
+        nav a {
+            color: #fff;
+            margin: 0 15px;
+            text-decoration: none;
+        }
+        main {
+            padding: 20px;
+        }
+        section {
+            margin-bottom: 20px;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            text-align: center;
+        }
+        ul {
+            list-style-type: square;
+            padding-left: 20px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+        th, td {
+            padding: 10px;
+            text-align: center; 
+        }
+        th {
+            background-color: #f4f4f4;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+        footer {
+            background: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+        .quote {
+            font-style: italic;
+            color: #555;
+        }
+        .match-schedule {
+            background: #fff;
+            padding: 15px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .fact-list {
+            background: #fff;
+            padding: 15px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .movie-review {
+            background: #fff;
+            padding: 15px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .quotes-section {
+            background: #fff;
+            padding: 15px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        .section-title {
+            font-size: 24px;
+            margin-bottom: 10px;
+            color: #333;
+        }
+        .section-content {
+            font-size: 16px;
+            line-height: 1.6;
+        }
+        .image-container {
+            text-align: center;
+            margin: 20px 0;
+        }
+        .image-container img {
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .footer-text {
+            font-size: 14px;
+        }
+        .fact-list li {
+            margin-bottom: 10px;
+        }
+        .movie-review p {
+            margin-bottom: 10px;
+        }
+        .quotes-section blockquote {
+            margin: 0;
+            padding: 10px;
+            background: #f9f9f9;
+            border-left: 5px solid #ccc;
+        }
+        .quotes-section blockquote p {
+            margin: 0;
+        }
+        .match-schedule table {
+            margin-top: 10px;
+        }
+        .match-schedule th {
+            background-color: #333;
+            color: #fff;
+        }
+        .match-schedule td {
+            background-color: #f9f9f9;
+        }
+        .match-schedule tr:nth-child(even) {
+            background-color: #f1f1f1;
+        }
+        .match-schedule tr:hover {
+            background-color: #ddd;
+        }
+        .movie-review img {
+            float:left;
+            margin-right: 15px;
+            border-radius: 10px;
+        }
+        .quotes-section blockquote::before {
+            content: "“";
+            font-size: 30px;
+            color: #ccc;
+        }
+        .quotes-section blockquote::after {
+            content: "”";
+            font-size: 30px;
+            color: #ccc;
+        }
+        .footer-text a {
+            color: #fff;
+            text-decoration: none;
+        }
+        .footer-text a:hover {
+            text-decoration: underline;
+        }
+        .clearfix::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+        .game-button {
+            display: block;
+            margin: 20px auto;
+            padding: 10px 20px;
+            font-size: 18px;
+            background-color: #898989;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .game-button:hover {
+            background-color: #898989;
+        }
+    </style>
+</head>
+<body>
+    <script src="index.js"></script>
+    <header>
+        <h1><u>Сайт, просто сайт</u></h1>
+        <button class="game-button" onclick="startGame()">Играть в викторину</button>
+    </header>
+    <nav>
+        <a href="#facts">Смешные факты</a>
+        <a href="#review">Обзор фильма</a>
+        <a href="#quotes">Цитаты</a>
+        <a href="#schedule">Расписание матчей</a>
+    </nav>
+    <main class="container">
+        <section id="facts" class="fact-list">
+            <h2 class="section-title"><b>Топ 5 смешных фактов из жизни</b></h2>
+            <ul>
+                <li>Я решил научиться готовить и по ошибке добавил в салат вместо масла лимонный сок. 
+                    Результат получился настолько кислым, что все мои друзья сначала задумались, а потом дружно рассмеялись.</li>
+                <li>Мой друг на вечеринке случайно перепутал бокал с водой и бокалом с пуншем. Выпив, он понял, что что-то не так, 
+                    и с улыбкой закричал: "Это же не вода!"</li>
+                <li>Во время поездки на отдых я забыл выключить будильник на телефоне. Он сработал в 4 утра, 
+                    и вся компания начала весело шутить о том, что я настроил его на "пляжное время"</li>
+                <li>Я попытался сделать селфи на природе, но неожиданно за мной пролетела птица, и мой кадр получился 
+                    с "птичьим комплиментом", что вызвало смех у всех, кто его увидел.</li>
+                <li>Я пытался войти в чужую машину, думая, что это моя.Я попытался сделать селфи на природе, но неожиданно за мной пролетела птица, 
+                    и мой кадр получился с "птичьим комплиментом", что вызвало смех у всех, кто его увидел.</li>
+            </ul>
+        </section>
+        <section id="review" class="movie-review clearfix">
+            <h2 class="section-title"><b>Обзор последнего просмотренного фильма</b></h2>
+            <img src="https://www.kino-teatr.ru/movie/poster/182606/218463.jpg" alt="Постер фильма">
+            <p>Фильм "Анора" режиссёра Шона Бэйкера — это сложное и многослойное произведение, которое 
+                с первого взгляда может показаться современной версией классической сказки о 
+                Золушке, но быстро превращается в глубокое размышление о социальном неравенстве и моральной деградации общества.</p>
+        </section>
+        <section id="quotes" class="quotes-section">
+            <h2 class="section-title"><b>Цитаты из фильма "Подозрительные лица"</b></h2>
+            <img src="https://m.media-amazon.com/images/M/MV5BOGNmYTA0OGEtODAxMi00MGFmLWE2YmYtNDUzNWVjNzNkNmIxXkEyXkFqcGdeQXVyODg0OTM4NTc@._V1_.jpg" alt="Постер фильма">
+            <blockquote>
+                <i>Человек не может изменить свою сущность. Он может убедить других, что изменился, но не себя.</i>
+            </blockquote>
+            <blockquote>
+                <i>Величайшая хитрость дьявола заключался в том, что он убедил мир, в своей нереальности. 
+                    Вот он есть — пфф! и вот его нет</i>
+            </blockquote>
+        </section>
+        <section id="schedule" class="match-schedule">
+            <h2 class="section-title">Расписание матчей команды Ньюкасл </h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Дата</th>
+                        <th>Время</th>
+                        <th>Матч</th>
+                        <th>Счёт</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>01.02.2025</td>
+                        <td>18:00</td>
+                        <td>Ньюкасл vs Фулхэм</td>
+                        <td>1:2</td>
+                    </tr>
+                    <tr>
+                        <td>05.02.2025</td>
+                        <td>23:00</td>
+                        <td>Ньюкасл vs Арсенал</td>
+                        <td>2:0</td>
+                    </tr>
+                    <tr>
+                        <td>08.02.2025</td>
+                        <td>20:45</td>
+                        <td>Ньюкасл vs Бирмингем Сити</td>
+                        <td>3:2</td>
+                    </tr>
+                    <tr>
+                        <td>15.02.2025</td>
+                        <td>18:00</td>
+                        <td>Ньюкасл vs Манчестер Сити</td>
+                        <td>0:4</td>
+                    </tr>
+                    <tr>
+                        <td>23.02.2025</td>
+                        <td>17:00</td>
+                        <td>Ньюкасл vs Ноттингем Форест</td>
+                        <td>-:-</td>
+                    </tr>
+                    <tr>
+                        <td>26.02.2025</td>
+                        <td>23:15</td>
+                        <td>Ньюкасл vs Ливерпуль</td>
+                        <td>-:-</td>
+                    </tr>
+                    <tr>
+                        <td>02.03.2025</td>
+                        <td>16:45</td>
+                        <td>Ньюкасл vs Брайтон энд Хоув Альбион</td>
+                        <td>-:-</td>
+                    </tr>
+                    <tr>
+                        <td>10.03.2025</td>
+                        <td>23:00</td>
+                        <td>Ньюкасл vs Вэст Хэм Юнайтед</td>
+                        <td>-:-</td>
+                    </tr>
+                    <tr>
+                        <td>16.03.2025</td>
+                        <td>19:30</td>
+                        <td>Ньюкасл vs Ливерпуль</td>
+                        <td>-:-</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+    <footer>
+        <p class="footer-text">&copy; 2025 Сайт, просто сайт. </p>
+    </footer>
+</body>
+</html>
