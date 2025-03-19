@@ -21,7 +21,7 @@ class VerticalBlock extends Block {
             <section class="intro">
                 <h2>Краткая информация</h2>
                 <p class="editable" data-key="introText">${this.content.introText}</p>
-                <button onclick="downloadCV()">Пасхалка</button>
+                <button onclick="pashalka()">Пасхалка</button>
             </section>
         </div>
         `;
@@ -109,7 +109,7 @@ function buildPage() {
 }
 
 
-function downloadCV() {
+function pashalka() {
     alert("Оскар так и не взял"); 
 }
 
