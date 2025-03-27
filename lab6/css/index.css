@@ -1,0 +1,258 @@
+@import "reset.css";
+body {
+    font-family: Arial, sans-serif;
+    background-color: #2c2c2d;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 10px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0 0 20px 0;
+    font-weight: bold;
+    color: inherit;
+}
+
+header {
+    width: 100%;
+    max-width: 1000px;
+    text-align: right;
+    margin-bottom: 20px;
+}
+
+#toggle-edit-mode {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+#toggle-edit-mode:hover {
+    background-color: #0056b3;
+}
+
+#profile-card {
+    background-color: #acdcda;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    max-width: 1000px;
+    width: 100%;
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+}
+
+.vertical-block {
+    text-align: center;
+}
+
+.vertical-block img {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.vertical-block h1 {
+    font-size: 24px;
+    color: #333333;
+    margin-bottom: 10px;
+}
+
+.vertical-block p {
+    font-size: 16px;
+    color: #666666;
+    margin-bottom: 20px;
+}
+
+.vertical-block button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.vertical-block button:hover {
+    background-color: #0056b3;
+}
+
+.horizontal-blocks {
+    display: flex;
+    flex-direction: column; 
+    gap: 20px;
+}
+
+.horizontal-blocks section {
+    background-color: #f9f9f9;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.horizontal-blocks h2 {
+    font-size: 20px;
+    color: #333333;
+    margin-bottom: 10px;
+}
+
+.horizontal-blocks p {
+    font-size: 14px;
+    color: #666666;
+    margin-bottom: 15px;
+    line-height: 1.6;
+}
+
+.horizontal-blocks button {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.horizontal-blocks button:hover {
+    background-color: #218838;
+}
+
+.contact-block {
+    background-color: #f9f9f9;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+}
+
+.contact-block h2 {
+    font-size: 20px;
+    color: #333333;
+    margin-bottom: 10px;
+}
+
+.contact-block p {
+    font-size: 14px;
+    color: #666666;
+    margin-bottom: 10px;
+    line-height: 1.6;
+}
+
+.edit-mode .editable {
+    border: 1px dashed #007bff;
+    padding: 5px;
+    margin: 5px 0;
+    white-space: normal;
+    overflow: visible;
+}
+
+.edit-mode .editable:focus {
+    outline: none;
+    border: 1px solid #007bff;
+}
+
+/* НОВЫЕ */
+header {
+    width: 100%;
+    background-color: #454545;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.site-name {
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+.nav {
+    display: flex;
+    gap: 15px;
+}
+
+.nav button {
+    background-color: #1d1d1d;
+    color: white;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+}
+
+.nav button:hover {
+    background-color: #555;
+}
+
+#api-result {
+    width: 100%;
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    max-width: 1000px;
+    text-align: center;
+}
+
+#api-result img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* НОВЫЕ ЗАКОНЧИЛИСЬ( */
+
+@media (min-width: 600px) {
+    #profile-card {
+        flex-direction: row; 
+    }
+
+    .vertical-block {
+        flex: 1;
+    }
+
+    .horizontal-blocks {
+        flex: 2;
+    }
+}
+@media (max-width: 320px) {
+    .vertical-block h1 {
+        font-size: 20px; 
+    }
+
+    .vertical-block p {
+        font-size: 14px; 
+    }
+
+    .vertical-block button {
+        padding: 8px 16px;
+        font-size: 14px;
+    }
+
+    .horizontal-blocks h2 {
+        font-size: 18px; 
+    }
+
+    .horizontal-blocks p {
+        font-size: 12px; 
+    }
+
+    .horizontal-blocks button {
+        padding: 6px 12px;
+        font-size: 12px;
+    }
+}
