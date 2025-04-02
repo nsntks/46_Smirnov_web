@@ -1,0 +1,66 @@
+.horizontalBlock {
+    background-color: #f9f9f9;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    flex: 2;
+  }
+  
+  .horizontalBlock h2 {
+    font-size: 20px;
+    color: #333333;
+    margin-bottom: 10px;
+  }
+  
+  .horizontalBlock p {
+    font-size: 14px;
+    color: #666666;
+    margin-bottom: 15px;
+    line-height: 1.6;
+  }
+  
+  .horizontalBlock button {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+  }
+  
+  .horizontalBlock button:hover {
+    background-color: #218838;
+  }
+  
+  .editable {
+    border: 1px dashed transparent;
+    padding: 5px;
+    margin: 5px 0;
+    white-space: normal;
+    overflow: visible;
+  }
+  
+  .editMode {
+    border: 1px dashed #007bff;
+  }
+  
+  .editMode:focus {
+    outline: none;
+    border: 1px solid #007bff;
+  }
+  
+  @media (max-width: 320px) {
+    .horizontalBlock h2 {
+      font-size: 18px;
+    }
+  
+    .horizontalBlock p {
+      font-size: 12px;
+    }
+  
+    .horizontalBlock button {
+      padding: 6px 12px;
+      font-size: 12px;
+    }
+  }

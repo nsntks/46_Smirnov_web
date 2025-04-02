@@ -1,0 +1,37 @@
+.contactBlock {
+    background-color: #f9f9f9;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+  }
+  
+  .contactBlock h2 {
+    font-size: 20px;
+    color: #333333;
+    margin-bottom: 10px;
+  }
+  
+  .contactBlock p {
+    font-size: 14px;
+    color: #666666;
+    margin-bottom: 10px;
+    line-height: 1.6;
+  }
+  
+  .editable {
+    border: 1px dashed transparent;
+    padding: 5px;
+    margin: 5px 0;
+    white-space: normal;
+    overflow: visible;
+  }
+  
+  .editMode {
+    border: 1px dashed #007bff;
+  }
+  
+  .editMode:focus {
+    outline: none;
+    border: 1px solid #007bff;
+  }
